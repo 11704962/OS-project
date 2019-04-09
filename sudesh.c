@@ -82,9 +82,12 @@ void join()
 
 {
 	int jsc=0, jfc= 0, min, flag;
-	if( fc!=0  && sc!=0){
-		while(jsc<sc && jfc<fc){
-			if(fac[jfc].at == stu[jsc].at){
+	if( fc!=0  && sc!=0)
+	{
+		while(jsc<sc && jfc<fc)
+		{
+			if(fac[jfc].at == stu[jsc].at)
+			{
 				m[jc] = fac[jfc];
 				jc++;
 				jfc++;
@@ -92,28 +95,35 @@ void join()
 				jc++;
 				jsc++;
 			}
-			else if(fac[jfc].at < stu[jsc].at){
+			else if(fac[jfc].at < stu[jsc].at)
+			{
 				m[jc]= fac[jfc];
 				jc++;
 				jfc++;
 			}
-			else if(fac[jfc].at > stu[jsc].at){
+			else if(fac[jfc].at > stu[jsc].at)
+			{
 				m[jc]= stu[jsc];
 				jc++;
 				jsc++;
 			}
 			else;
 		}
-		if(jc != (fc+sc)){
-			if(fc!=jfc){
-				while(jfc!=fc){
+		if(jc != (fc+sc))
+		{
+			if(fc!=jfc)
+			{
+				while(jfc!=fc)
+				{
 					m[jc]= fac[jfc];
 					jc++;
 					jfc++;
 				}
 			}
-			else if(sc!=jsc){
-				while(jsc!=sc){
+			else if(sc!=jsc)
+			{
+				while(jsc!=sc)
+				{
 					m[jc]= stu[jsc];
 					jc++;
 					jsc++;
@@ -121,21 +131,26 @@ void join()
 			}
 		}
 	}
-	else if(fc==0){
-		while(jsc!=sc){
+	else if(fc==0)
+	{
+		while(jsc!=sc)
+		{
 			m[jc]= stu[jsc];
 			jc++;
 			jsc++;
 		}
 	}
-	else if(sc==0){
-		while(jfc!=fc){
+	else if(sc==0)
+	{
+		while(jfc!=fc)
+		{
 			m[jc]= fac[jfc];
 			jc++;
 			jfc++;
 		}
 	}
-	else {
+	else 
+	{
 		printf("\n No valid Jobs available\n");
 	}
 }
@@ -173,7 +188,8 @@ void processDetails()
 	int priority,  i, t;
 	printf("\n\n\tEnter total no of queries: "); scanf("%d", &n);
 	if(n==0) { printf("\n No queries to solve\n"); }
-	else{
+	else
+	{
 		printf("\n\tEnter time quantum for each Process: "); scanf("%d", &quantum);
 		printf("\n\tEnter 1 for faculty and 2 for student\n");
 		for(i=0; i<n; i++){
